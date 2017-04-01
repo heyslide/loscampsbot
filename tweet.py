@@ -20,4 +20,4 @@ while True:
     if len(tweet_text) <= 140 and tweet_text != '\n':
 	api.update_status(status=tweet_text)
 	print tweet_text
-	time.sleep(1200)
+	time.sleep(2400)
