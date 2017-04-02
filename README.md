@@ -1,13 +1,13 @@
 # loscampsbot
 A Twitter bot that tweets lyrics from Los Campesinos! songs, available at [@loscampsbot](https://twitter.com/loscampsbot).
 
-# Why
+## Why
 I was bored, I'm a great fan of Los Campesinos! and I wanted to do a Twitter bot. Basically.
 
-# How
+## How
 I created a new account for the bot and obtained the necessary keys and tokens. I used tweepy to connect with the Twitter API to post the status updates. The bot itself is dead simple: it gets a random line from the lyrics.txt file, it checks if these lyrics fit in a tweet (all of them should but oversights can happen) and that it isn't empty, and then posts it. After 20 minutes, the process starts again. The bot is deployed on Heroku.
 
-# What
+## What
 
 - lyrics.txt: the file where all the lyrics are written. I got them from [Genius](https://genius.com/artists/Los-campesinos) and edited them slightly (removing repetitions of the chorus, writing some lyrics two times but in different combinations). Roughly by inverse release order. 
 - Procfile: declares the process type and the command to run by the dyno on Heroku.
