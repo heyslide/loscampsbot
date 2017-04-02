@@ -1,12 +1,12 @@
-import time, tweepy, config
+import time, tweepy, os
 from linereader import copen
 from random import randint
 
 """tweepy doing its magic"""
-CONSUMER_KEY = config.ckey
-CONSUMER_SECRET = config.csecret
-ACCESS_KEY = config.akey
-ACCESS_SECRET = config.asecret
+CONSUMER_KEY = os.environ['CKEY']
+CONSUMER_SECRET = os.environ['CSECRET']
+ACCESS_KEY = os.environ['AKEY']
+ACCESS_SECRET = os.environ['ASECRET']
 
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
