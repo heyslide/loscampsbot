@@ -9,7 +9,7 @@ I created a new account for the bot and obtained the necessary keys and tokens. 
 
 ## What
 
-- lyrics.txt: the file where all the lyrics are written. I got them from [Genius](https://genius.com/artists/Los-campesinos) and edited them slightly (removing repetitions of the chorus, writing some lyrics two times but in different combinations). Roughly by inverse release order. 
-- Procfile: declares the process type and the command to run by the dyno on Heroku.
+- lyrics.txt: the file where all the lyrics are written. I got them from [Genius](https://genius.com/artists/Los-campesinos) and edited them slightly (removing repetitions of the chorus, writing some lyrics two times but in different combinations). Roughly by inverse release order, if anyone wants to check. Bars (|) are used to mark where the new line characters will go, replacing them in the script itself.
+- Procfile: declares the process type and the command to be run by the dyno on Heroku.
 - requirements.txt: requirements and dependencies for the script.
 - tweet.py: the script for the bot. Written in Python 2.7. Uses tweepy to access the Twitter API and linereader to easily grab a line from the lyrics file.
