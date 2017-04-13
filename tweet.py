@@ -14,10 +14,15 @@ api = tweepy.API(auth)
 
 lyrics = copen('lyrics.txt')
 lines = lyrics.count('\n')
+lastline = 0
 
 while True:
-    tweet_text = lyrics.getline(randint(1, lines))
+    gottenline = randint(1, lines)
+    while gottenline == lastline:
+	gottenline = randint(1, lines)
+    tweet_text = lyrics.getline(gottenline)
     if len(tweet_text) <= 140 and tweet_text != '\n':
+	tweet_text = tweet_text.replace("|", '\n')
 	api.update_status(status=tweet_text)
 	print tweet_text
-	time.sleep(1200)
+	time.sleep(60*30)
